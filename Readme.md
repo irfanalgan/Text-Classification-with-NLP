@@ -205,7 +205,6 @@ https:/[/www.ibm.com/cloud/learn/supervised-learning](http://www.ibm.com/cloud/l
 
 https://ieeexplore.ieee.org/abstract/document/7364114
 
-1. [[7](#_bookmark10)][https://www.sikayetvar.com/turk-telekom](https://www.sikayetvar.com/turk-telekom)
 2. The official website of Postgresqlhttps://[www.postgresql.org](http://www.postgresql.org/)
 3. Wu, H., &amp; Yuan, N. (2018). _An Improved TF-IDF algorithm based on word __frequency distribution information and category distribution__ information._
 
