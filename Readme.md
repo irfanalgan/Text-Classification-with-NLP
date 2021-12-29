@@ -4,19 +4,19 @@
 
 PostgreSQL is a powerful, open-source object-relational database system with reliability, feature robustness, and performance. I install psycopg like any other Python package.
 
-![](RackMultipart20211229-4-11na3h7_html_7461df5f3e39d88c.jpg)
+![N|Solid](https://i.hizliresim.com/698eh15.png)
 
 _Figure 3: Installing PostgreSQL library_
 
 After installation, I imported the library import psycopg2 and used it to take data from the database.
 
-![](RackMultipart20211229-4-11na3h7_html_4ad34f323488aa48.jpg)
+![N|Solid](https://i.hizliresim.com/ika2435.png)
 
 _Figure 4: Taking data from the database_
 
 I take all data at once [[Figure 4](#_bookmark16)].
 
-![](RackMultipart20211229-4-11na3h7_html_89720330a8ff3e38.jpg)
+![N|Solid](https://i.hizliresim.com/f01jexd.png)
 
 _Figure 5: Saving data to the data frame_
 
@@ -47,13 +47,13 @@ Supervised learning can be separated into two types of problems when data mining
 
 Classification uses an algorithm to assign test data to specific categories [[Figure 6](#_bookmark25)] correctly.
 
-![](RackMultipart20211229-4-11na3h7_html_358a7767956cc8bf.png)
+![N|Solid](https://i.hizliresim.com/as1vx0d.png)
 
 _Figure 6: Classification graph_
 
 As you see in figure [[9](#_bookmark25)], we also separate our train data into two categories, network\_içi, and network\_dışı. network\_içi problems generally include connection errors, cable problems, and device problems. On the other hand, network\_dışı problems typically have technical issues and order, internet transfer problems. We took it as one if the complaint is related to the network\_içi, and 0 if not [[Figure 7](#_bookmark27)].
 
-![](RackMultipart20211229-4-11na3h7_html_f9e534562343b946.png) ![](RackMultipart20211229-4-11na3h7_html_8e45e90f9947e00c.png)
+![N|Solid](https://i.hizliresim.com/k3q4nog.png)
 
 _Figure 7: Separated data_
 
@@ -70,27 +70,28 @@ from nltk.stem import WordNetLemmatizer.
 
 In order to use these operations on Turkish texts, I had to use external libraries such as Zemberek. Zemberek is a natural language processing library that you can use for open-source Turkish languages developed using Java programming language [[Figure 8](#_bookmark30)].
 
-![](RackMultipart20211229-4-11na3h7_html_36c5e5bea5f586b8.png)
+![N|Solid](https://i.hizliresim.com/hpux62s.png)
 
 _Figure 8: Implementing Zemberek library_
 
 After that, I used this library to preprocess. Also, I have downloaded a stop word txt file for the Turkish language [[Figure 9](#_bookmark32)].
 
-![](RackMultipart20211229-4-11na3h7_html_52f04da8b17f2978.jpg)
+![N|Solid](https://i.hizliresim.com/appdmwm.png)
 
 _Figure 9: Implementing stop word data_
 
-![](RackMultipart20211229-4-11na3h7_html_23003089900e02ec.jpg) ![](RackMultipart20211229-4-11na3h7_html_ca3358ad03ba67d6.jpg)
+![N|Solid](https://i.hizliresim.com/afjm8gr.png)
+![N|Solid](https://i.hizliresim.com/dkixi9y.png)
 
 _Figure 10: Preprocessing functions_
 
-![](RackMultipart20211229-4-11na3h7_html_1b487c47f50402f9.png)
+![N|Solid](https://i.hizliresim.com/jcchamh.png)
 
 I cleaned the text by using preprocessing functions. Firstly, I removed all capital words and punctuations. And then, I applied a stopword list to our text and removed all stop words in our text. Finally, I used the Zemberek library to lemmatize our text [[Figure 10](#_bookmark34)].
 
 After preprocessing, finally, we get our clean text [[Figure 11](#_bookmark36)].
 
-![](RackMultipart20211229-4-11na3h7_html_af96168e82fd4f4f.png)
+![N|Solid](https://i.hizliresim.com/otl0eia.png)
 
 _Figure 11: Cleaned text_
 
@@ -109,19 +110,19 @@ Word2Vec, proposed and supported by Google, is not a unique algorithm, but it co
 
 We can convert our text input to numerical form using any of these methods, which willbe utilized to develop the categorization model. As I mentioned above, I allocated %75 of the dataset for the trained data and %25 for the test data by using the code below [[Figure12](#_bookmark41)].
 
-![](RackMultipart20211229-4-11na3h7_html_23685e35284075eb.jpg)
+![N|Solid](https://i.hizliresim.com/858hn6n.png)
 
 _Figure 12: Splitting datasets_
 
 The code for vectorization by using Tf-Idf [[Figure 13](#_bookmark43)].
 
-![](RackMultipart20211229-4-11na3h7_html_7997f35a7ddafdf7.png)
+![N|Solid](https://i.hizliresim.com/c8ap86a.png)
 
 _Figure 13: Tf-Idf code_
 
 As you see in [Figure 14](#_bookmark45),the left part coordinates of non-zero values and in the right part, values at that point.
 
-![](RackMultipart20211229-4-11na3h7_html_94c6a54c01f76307.png)
+![N|Solid](https://i.hizliresim.com/mna8cln.png)
 
 _Figure 14:Train vectors_
 
@@ -135,13 +136,14 @@ Logistic regression permits the use of continuous or categorical predictors and 
 
 I imported the logistic regression using Python&#39;s sklearn library [[Figure 15](#_bookmark49)].
 
-![](RackMultipart20211229-4-11na3h7_html_d20f1a7147b24fb3.jpg)
+
+![N|Solid](https://i.hizliresim.com/fz4x5wj.png)
 
 _Figure 15:Sklearn Library_
 
 I implemented classification model using Logistic Regression [[Figure 16](#_bookmark51)].
 
-![](RackMultipart20211229-4-11na3h7_html_7e2be011a961e4b.png)
+![N|Solid](https://i.hizliresim.com/9srxyqk.png)
 
 _Figure 16:Tf-Idf Model_
 
@@ -152,7 +154,7 @@ The Area Under the ROC curve (AUC) is an aggregated metric that evaluates how we
 
 Except for AUC, all the measures may be calculated using the four parameters on the left [[15](#_bookmark54)[15](#_bookmark54)].
 
-![](RackMultipart20211229-4-11na3h7_html_a71ac2c77a1243de.jpg)
+![N|Solid](https://i.hizliresim.com/6qwoxnu.png)
 
 _Figure 17: Parameters_
 
@@ -183,22 +185,17 @@ F1 Score = 2\*(Recall \* Precision) / (Recall + Precision)
 
 Finally, we implement our Tf-If model to our test data. However, we need to clean our text data before the implementation process [[Figure 18](#_bookmark59)].
 
-![](RackMultipart20211229-4-11na3h7_html_46e26a87a63d8960.jpg)
+![N|Solid](https://i.hizliresim.com/naohnvi.png)
 
 _Figure 18: Implementing the model_
 
 To check if our predictions were correct, I compared my final data with the comparison data whose values I already know [[Figure 19](#_bookmark61)].
 
-![](RackMultipart20211229-4-11na3h7_html_938bc3710ddd6cb8.png)
+![N|Solid](https://i.hizliresim.com/iivtr8f.png)
 
 _Figure 19: Accuracy_
 
-1.
-# CONCLUSION
 
-As I previously stated, my internship provided me with a variety of intriguing duties. I finished my summer practice after coping with some issues. This summer&#39;s practice provided me with entirely new talents that I can apply to future work prospects. I&#39;ve always wanted to be a perfect computer engineer; I&#39;ve reached a portion of my aim. Now I know Python and machine learning algorithms, which are utilized in every sector of the world. I learned about Python, supervised and unsupervised learning techniques, data processing, and software integrations in a nutshell.
-
-1.
 # REFERENCES
 
 1. [[15](#_bookmark54)]Accuracy, Precision, Recall &amp; F1 Score: Interpretation of PerformanceMeasures.[https://blog.exsilio.com/all/accuracy-precision-recall-f1-score-interpretation-of-](https://blog.exsilio.com/all/accuracy-precision-recall-f1-score-interpretation-of-performance-measures/)[performance-measures/](https://blog.exsilio.com/all/accuracy-precision-recall-f1-score-interpretation-of-performance-measures/)
@@ -220,9 +217,4 @@ https://ieeexplore.ieee.org/abstract/document/7364114
 
 [10. [11](#_bookmark30)] Zemberek Kütüphanesi ile Türkçe Metinlerde Kelime Köklerinin Bulunması.[https://melikebektas95.medium.com/zemberek-kütüphanesi-ile-türkçe-metinlerde-](https://melikebektas95.medium.com/zemberek-k%C3%83%C2%BCt%C3%83%C2%BCphanesi-ile-t%C3%83%C2%BCrk%C3%83%C2%A7e-metinlerde-kelime-k%C3%83%C2%B6klerinin-bulunmas%C3%84%C2%B1-6ddd3a875d5f)[kelime-köklerinin-bulunması-6ddd3a875d5f](https://melikebektas95.medium.com/zemberek-k%C3%83%C2%BCt%C3%83%C2%BCphanesi-ile-t%C3%83%C2%BCrk%C3%83%C2%A7e-metinlerde-kelime-k%C3%83%C2%B6klerinin-bulunmas%C3%84%C2%B1-6ddd3a875d5f)
 
-1.
-# REMOTEINTERNSHIPAPPENDIXFORM
 
-# ![](RackMultipart20211229-4-11na3h7_html_d74f70efd3d59adb.png)
-
-1| Page
