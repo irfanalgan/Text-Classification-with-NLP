@@ -1,50 +1,9 @@
 <blockquote>
-
-!{width:512px;height:440px;}media/image1.png!
-
-*Name of Student : İrfan Kaan ALGAN*
-
-*ID Number 2328599*
-
-*Name of Company : INNOVA Bilişim Çözümleri A.Ş*
-
-*Project Title : Text Classification Date of Submission : 29/12/2021*
-
-</blockquote>
-
-h1(#abstract). ABSTRACT
-
-<blockquote>
-
-In this report, I will mention information and some specific problems with solutions throughout my summer internship. The main purpose of this internship was to create a model to solve a problem, learn how to program in Jupyter Notebook, get familiar with data manipulation and gain some knowledge about ML. I have created a model that collects complaints about a company and categorizes them. There are many models like stemmer, lemmatization and for English texts, I tried to create a text cleaning model for Turkish texts. Not only I have created a model, but also, I have improved myself about knowledge of Python and Machine Learning.
-
-Unfortunately, I had no chance to work with a team, and I had to develop a program with a language that I did not have experience with. However, this situation helped me to improve my self&#45;learning, hard&#45;working, and problem&#45;solving skills.
-
 *TABLE OF CONTENTS*
 
-</blockquote>
 
-"ABSTRACT 2":#abstract
-
-bq. "TABLE OF FIGURES 4":#table-of-figures
-
-
-
-<ol style="list-style-type: decimal;">
-<li><p>"INNOVA BİLİŞİM ÇÖZÜMLERİ A.Ş 5":#innova-bi̇li̇şi̇m-çözümleri̇-a.ş</p></li>
-<li><p>"INTRODUCTION 6":#introduction</p></li>
-<li>bq. <p>"PROBLEM STATEMENT 6":#problem-statement</p>
-
-
-<ol style="list-style-type: decimal;">
-<li><p>"Labeling Data Manually 6":#labeling-data-manually</p>
-<ol style="list-style-type: decimal;">
-<li><p>"www.sikayetvar.com":http://www.sikayetvar.com/ "7":#_bookmark8</p></li>
-</ol>
-</li>
 <li><p>"Building Database 8":#building-database</p>
 <ol style="list-style-type: decimal;">
-<li><p>"PostgreSQL 8":#postgresql</p></li>
 <li><p>"Trained Data 9":#trained-data</p></li>
 <li><p>"Test Data 9":#test-data</p></li>
 <li><p>"Comparison Data 9":#comparison-data</p></li>
@@ -71,8 +30,6 @@ bq. "TABLE OF FIGURES 4":#table-of-figures
 <li>bq. <p>"Recall 16":#recall</p>
 
 </li>
-<li>bq. <p>"F1&#45;Score 16":#f1-score</p>
-
 </li>
 </ol>
 </li>
@@ -82,108 +39,22 @@ bq. "TABLE OF FIGURES 4":#table-of-figures
 </li>
 </ol>
 </li>
-<li><p>"CONCLUSION 17":#conclusion</p></li>
 <li><p>"REFERENCES 18":#references</p></li>
-<li><p>"REMOTE INTERNSHIP APPENDIX FORM 19":#remote-internship-appendix-form</p></li>
 </ol>
 
-h1(#table-of-figures). TABLE OF FIGURES
-
-<blockquote>
-
-<em>"website for labeling   7":#_bookmark6 "w":#_bookmark9"ww.sikayetvar.com":http://www.sikayetvar.com/ "Türk Telekom page   7":#_bookmark9 "Installing PostgreSQL library   8":#_bookmark13 "Taking data from database   8":#_bookmark15 "Saving data to data frame   8":#_bookmark17 "Classification graph   9":#_bookmark24 "Separated data   10":#_bookmark26 "Implementing Zemberek library   11":#_bookmark29 "Implementing stop word data   11":#_bookmark31 "Preprocessing functions   11":#_bookmark33 "Cleaned text   12":#_bookmark35</em>
-
-<em>"Splitting datasets   13":#_bookmark40 "Tf&#45;Idf code   13":#_bookmark42 "Train vectors   14":#_bookmark44 "Sklearn Library   14":#_bookmark48 "Tf&#45;Idf Model   15":#_bookmark50 "Parameters   15":#_bookmark53 "Implementing model   16":#_bookmark58 "Accuracy   17":#_bookmark60</em>
-
-</blockquote>
-
-h1(#innova-bi̇li̇şi̇m-çözümleri̇-a.ş). INNOVA BİLİŞİM ÇÖZÜMLERİ A.Ş
-
-<blockquote>
-
-Innova Bilişim Çözümleri A.Ş., since its establishment in 1999, has been one of the leading IT solutions companies in Turkey with its innovative solutions that provide competitive, cost and profitability advantages in the digital transformation journeys of institutions.
-
-Innova provides services in many fields, especially in telecommunications, finance, banking, insurance, retail, energy, automotive, production, service, and various public sectors.
-
-Innova, which has rich competencies in artificial intelligence technologies, big data, and data analytics, PayFlex Innova in the field of fintech solutions such as payment, loyalty, and collection, SkywaveIoT on the internet of things, LEGA in administrative and legal debt follow&#45; up, HICAMP in health informatics and hospital management, aviation technologies. Provides services in the field with AvioFlex brands.
-
-The company also provides local and national product software, manageable services, outsourcing, and consultancy services. On the system integration side, it operates in areas such as hardware, Kiosk &amp; Digital Signage and infrastructure services, and third&#45;party products and services such as SAP, Business Intelligence, CRM, IT Governance, and Project Management.
-
-</blockquote>
-
-!{width:622px;height:338px;}media/image2.jpeg!
-
-h1(#introduction). INTRODUCTION
-
-bq. I have completed my summer internship in Innova Bilişim, Ankara, Turkey. Due to COVID&#45;19, I had to do my training remotely. Since I was in communication with my supervisor, this situation did not affect my internship negatively. After a meeting with my supervisor, he asked me to research some machine learning stuff such as word2vec and tf&#45;idf or how we can use them in our project. We were dealing with texts written in Turkish; that's why I had a little trouble finding the source. There are lots of models and sources in English but not for sources in Turkish. This project they gave me was planned to label some unlabeled data by using ML. Moreover, I have learned Python and developed a supervised learning model to mark the data with reasonable accuracy.
-
-
-
-h1(#problem-statement). PROBLEM STATEMENT
-
-<blockquote>
-
-During my summer practice, I have worked on three different problems.
-
-First of all, I had to manually label the unlabeled dataset of 158,000 results as much as I could. This process was the most tedious part of my internship because I had to read and understand the long text, and I had to label it. While doing this, I used a website created by an intern who came before me.
-
-Afterward, I have built a database in PostgreSQL. I keep the data in the database. When I label a text, the program adds the labels automatically to the database.
-
-Finally, I have created a supervised learning model in Jupyter Notebook. This part was the most challenging because I had no idea how to create a model before summer practice.
-
-</blockquote>
-
-h2(#labeling-data-manually). Labeling Data Manually
-
-<blockquote>
-
-The main purpose of this part was to categorize the raw data received from "www.sikayetvar.com":http://www.sikayetvar.com/ manually. Since Innova is a collaborator of Türk Telekom, we collect the complaints made on behalf of Türk Telekom through "www.sikayetvar.com.":http://www.sikayetvar.com/ The company gave me the dataset containing 158000 complaints. I manually divided about 4000 (3000 trained data and 1000 test data) data into categories using the website made by the previous intern
-
-["Figure 1":#_bookmark7]. The main reason we did this is to ensure that we have correctly labeled data to use a supervised learning model.
-
-</blockquote>
-
-!{width:617px;height:270px;}media/image3.jpeg!
-
-bq. _Figure 1__: website for labeling_
-
-
-
-h3(#www.sikayetvar.com). "www.sikayetvar.com":http://www.sikayetvar.com/
-
-bq. sikayetvar.com ["Figure 2":#_bookmark10] is a website that allows people to send their complaints about the products they buy, cargo operations, and services online to companies.
-
-
-
-!{width:624px;height:280px;}media/image4.jpeg!
-
-bq. _Figure 2__:_ _"www.sikayetvar.com":http://www.sikayetvar.com/ Türk Telekom page_
 
 
 
 <ol start="2" style="list-style-type: decimal;">
-<li>h2(#building-database). Building Database
+<li>Building Database
 
 <ol style="list-style-type: decimal;">
-<li>h3(#postgresql). PostgreSQL
+<li>PostgreSQL
 </li>
 </ol>
 </li>
 </ol>
 
-bq. PostgreSQL is a powerful, open&#45;source object&#45;relational database system with reliability, feature robustness, and performance. I install psycopg like any other Python package ["Figure 3":#_bookmark14].
-
-
-
-!{width:468px;height:89px;}media/image5.jpeg!
-
-<blockquote>
-
-_Figure 3__: Installing PostgreSQL library_
-
-After installation, I imported the library import psycopg2 and used it to take data from the database.
-
-!{width:622px;height:327px;}media/image6.jpeg(Text Description automatically generated)!
 
 _Figure 4__: Taking data from the database_
 
@@ -439,11 +310,6 @@ bq. _Figure 19__: Accuracy_
 
 
 
-h1(#conclusion). CONCLUSION
-
-bq. As I previously stated, my internship provided me with a variety of intriguing duties. I finished my summer practice after coping with some issues. This summer's practice provided me with entirely new talents that I can apply to future work prospects. I've always wanted to be a perfect computer engineer; I've reached a portion of my aim. Now I know Python and machine learning algorithms, which are utilized in every sector of the world. I learned about Python, supervised and unsupervised learning techniques, data processing, and software integrations in a nutshell.
-
-
 
 h1(#references). REFERENCES
 
@@ -474,6 +340,4 @@ bq. https://ieeexplore.ieee.org/abstract/document/7364114
 
 </blockquote>
 
-h1(#remote-internship-appendix-form). REMOTE INTERNSHIP APPENDIX FORM
 
-h1(#section). !{width:685px;height:439px;}media/image25.png!
